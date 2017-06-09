@@ -45,6 +45,20 @@ Alternatively, change them via Atom's `config.json`, for example:
     ]
 ```
 
+## Commands and Keybindings
+
+The following commands are available via the Command Palette if a Dafny file is open in the active editor:
+- `dafny-workbench:start-dafny`
+- `dafny-workbench:stop-dafny`
+
+By default, no keybindings are setup. They can be added to your `keymap.cson`, for example:
+
+```cson
+'atom-text-editor[data-grammar~="source"][data-grammar~="dafny"]':
+  'ctrl-shift-B': 'dafny-workbench:start-dafny'
+  'ctrl-shift-alt-B': 'dafny-workbench:stop-dafny'
+```
+
 ## Usage
 
 When you open a file that is associated with the language grammar of the desired verification tool (e.g. `.dfy` for `language-dafny`), the verification tool will be run on the editor's content. Since the verification tools do not accept input from `stdin`, the package writes a copy of the file buffer to the OS's temporary folder each time a change is made to provide continuous verification, without the need to save a file.
