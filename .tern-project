@@ -1,0 +1,21 @@
+{
+  "ecmaVersion": 7,
+  "libs": [
+    "ecmascript"
+  ],
+  "loadEagerly": [
+    "lib/**/*.js"
+  ],
+  "dontLoad": [
+    "node_modules/**",
+    "spec/fixtures/**"
+  ],
+  "plugins": {
+    "complete_strings": {},
+    "doc_comment": {},
+    "es_modules": {},
+    "modules": {},
+    "node": {},
+    "node_resolve": {}
+  }
+}

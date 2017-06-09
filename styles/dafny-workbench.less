@@ -1,0 +1,35 @@
+@import "ui-variables";
+
+dafny-workbench-status-bar {
+  .dafny-status {
+    padding-top: 1px;
+    display: inline-block;
+    text-align: center;
+  }
+  .dafny-status.running {
+    color: @text-color-info;
+    cursor: wait;
+    animation: spin 1s linear infinite;
+  }
+  .dafny-status.stopped {
+    color: @text-color-warning;
+  }
+  .dafny-status.no-attempt {
+    color: @text-color-warning;
+  }
+  .dafny-status.successful {
+    color: @text-color-success;
+  }
+  .dafny-status.unsuccessful {
+    color: @text-color-error;
+  }
+}
+
+@-webkit-keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}

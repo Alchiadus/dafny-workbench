@@ -1,0 +1,109 @@
+{
+  "name": "dafny-workbench",
+  "main": "./lib/main",
+  "version": "0.0.0",
+  "description": "Workbench for the program verification tool Dafny.",
+  "keywords": [
+    "dafny",
+    "verification",
+    "linter"
+  ],
+  "repository": "https://github.com/alchiadus/dafny-workbench",
+  "license": "MIT",
+  "engines": {
+    "atom": "^1.13.0"
+  },
+  "activationHooks": [
+    "language-dafny:grammar-used"
+  ],
+  "consumedServices": {
+    "status-bar": {
+      "versions": {
+        "^1.0.0": "consumeStatusBar"
+      }
+    },
+    "busy-signal": {
+      "versions": {
+        "1.0.0": "consumeSignal"
+      }
+    },
+    "linter-indie": {
+      "versions": {
+        "2.0.0": "consumeLinter"
+      }
+    }
+  },
+  "configSchema": {
+    "executableSettings": {
+      "order": 1,
+      "title": "Executable Settings",
+      "type": "object",
+      "properties": {
+        "dafnyExecutablePath": {
+          "order": 1,
+          "title": "Dafny Executable Path",
+          "description": "The location of the Dafny binary. By default it is resolved against the PATH variable.",
+          "type": "string",
+          "default": "dafny"
+        },
+        "dafnyExecutableArguments": {
+          "order": 2,
+          "title": "Dafny Executable Arguments",
+          "description": "Comma separated list of options to pass to the Dafny binary. Execute `dafny /help` in your terminal to see which options are allowed.",
+          "type": "array",
+          "default": [
+            "/nologo",
+            "/compile:0"
+          ],
+          "items": {
+            "type": "string"
+          }
+        }
+      }
+    }
+  },
+  "devDependencies": {
+    "babel-eslint": "^7.0.0",
+    "eslint": "^3.0.0",
+    "eslint-config-xo": "^0.18.0"
+  },
+  "eslintConfig": {
+		"extends": "xo/esnext",
+    "esnext": true,
+    "env": {
+      "browser": true,
+      "node": true
+    },
+    "globals": {
+      "atom": true
+    },
+    "parser": "babel-eslint",
+    "rules": {
+      "arrow-parens": [
+        "error",
+        "always"
+      ],
+      "capitalized-comments": "off",
+      "comma-dangle": [
+        "error",
+        "always-multiline"
+      ],
+      "indent": [
+        "error",
+        2,
+        {
+          "SwitchCase": 1
+        }
+      ],
+      "max-params": "off",
+      "no-console": "error",
+      "no-negated-condition": "off",
+      "no-unused-expressions": [
+        "error",
+        {
+          "allowTernary": true
+        }
+      ]
+    }
+	}
+}
