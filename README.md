@@ -17,6 +17,9 @@ $ apm install dafny-workbench
 - Install [Dafny](https://github.com/Microsoft/dafny/wiki/INSTALL) and verify it runs from the command line.
 - Install the [language-dafny](https://atom.io/packages/language-dafny) package.
 
+Note:
+  - On non-Windows operating systems `pkill` is used to terminate Dafny and its descendants (e.g. Z3), make sure it can be resolved against the `PATH` variable.
+
 #### Recommended
 
 - Install the [linter](https://atom.io/packages/linter) package.
