@@ -2,14 +2,13 @@
 
 dafny-workbench-status-bar {
   .dafny-status {
-    padding-top: 1px;
-    display: inline-block;
-    text-align: center;
+    margin-top: 1px;
   }
   .dafny-status.running {
     color: @text-color-info;
     cursor: wait;
-    animation: spin 1s linear infinite;
+    margin-bottom: 5px;
+    vertical-align: middle;
   }
   .dafny-status.stopped {
     color: @text-color-warning;
@@ -22,14 +21,5 @@ dafny-workbench-status-bar {
   }
   .dafny-status.unsuccessful {
     color: @text-color-error;
-  }
-}
-
-@-webkit-keyframes spin {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
   }
 }
