@@ -3,23 +3,23 @@
 dafny-workbench-status {
   .dafny-status {
     margin-top: 1px;
-  }
-  .dafny-status.running {
-    color: @text-color-info;
-    cursor: wait;
-    margin-bottom: 5px;
-    vertical-align: middle;
-  }
-  .dafny-status.stopped {
-    color: @text-color-warning;
-  }
-  .dafny-status.no-attempt {
-    color: @text-color-warning;
-  }
-  .dafny-status.successful {
-    color: @text-color-success;
-  }
-  .dafny-status.unsuccessful {
-    color: @text-color-error;
+    &.running {
+      color: @text-color-info;
+      cursor: wait;
+      margin-bottom: 5px;
+      vertical-align: middle;
+    }
+    &.stopped {
+      color: @text-color-warning;
+    }
+    &.no-attempt {
+      color: @text-color-warning;
+    }
+    &.successful {
+      color: @text-color-success;
+    }
+    &.unsuccessful {
+      color: @text-color-error;
+    }
   }
 }
