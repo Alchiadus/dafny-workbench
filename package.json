@@ -103,7 +103,8 @@
         {
           "allowTernary": true
         }
-      ]
+      ],
+      "no-warning-comments": "off"
     }
 	}
 }
