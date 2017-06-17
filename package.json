@@ -69,7 +69,6 @@
   },
   "eslintConfig": {
     "extends": "xo/esnext",
-    "esnext": true,
     "env": {
       "browser": true,
       "node": true
