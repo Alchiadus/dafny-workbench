@@ -68,7 +68,7 @@
     "eslint-config-xo": "^0.18.0"
   },
   "eslintConfig": {
-		"extends": "xo/esnext",
+    "extends": "xo/esnext",
     "esnext": true,
     "env": {
       "browser": true,
@@ -106,5 +106,5 @@
       ],
       "no-warning-comments": "off"
     }
-	}
+  }
 }
