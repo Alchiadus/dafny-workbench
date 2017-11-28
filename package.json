@@ -1,7 +1,7 @@
 {
   "name": "dafny-workbench",
   "main": "./lib/main",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "Workbench for the program verification tool Dafny.",
   "keywords": [
     "dafny",
